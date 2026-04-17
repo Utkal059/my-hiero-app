@@ -1,0 +1,18 @@
+# Per-repo configuration for Hiero Workflow Bot
+# Repositories opt-in to specific workflows by including this file
+
+workflows:
+  issue_triage:
+    enabled: true
+    labels:
+      on_open: ["needs-triage"]
+    welcome_comment: true
+
+  pr_review:
+    enabled: true
+    welcome_comment: true
+
+  stale_issues:
+    enabled: false
+    days_before_stale: 30
+    stale_label: "stale"
