@@ -1,33 +1,19 @@
-# utkal-hiero-app
+# Hiero GitHub Workflow App — LFX Mentorship Prototype
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that Mentorship prototype
+A config-driven GitHub App built with [Probot](https://github.com/probot/probot), 
+developed as a prototype for the 
+[LFDT – Hiero GitHub Workflow App](https://github.com/LF-Decentralized-Trust-Mentorships/mentorship-program/issues/73) 
+mentorship project (Issue #73).
 
-## Setup
+## What it does
 
-```sh
-# Install dependencies
-npm install
+This app implements per-repository automation for Hiero maintainer workflows:
 
-# Run the bot
-npm start
-```
+- **PR lifecycle automation** — labels, review assignments, and stale detection triggered by PR events
+- **Issue management** — auto-labeling, stale issue closure, difficulty tagging
+- **Contributor onboarding** — welcome messages for first-time contributors, DCO reminders
+- **Config-driven behavior** — each repository can enable/disable features via `hiero-workflow.yml`
 
-## Docker
+## Architecture
 
-```sh
-# 1. Build container
-docker build -t utkal-hiero-app .
-
-# 2. Start container
-docker run -e APP_ID=<app-id> -e PRIVATE_KEY=<pem-value> utkal-hiero-app
-```
-
-## Contributing
-
-If you have suggestions for how utkal-hiero-app could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
-
-For more, check out the [Contributing Guide](CONTRIBUTING.md).
-
-## License
-
-[ISC](LICENSE) © 2026 Utkal059
+The design follows the multi-repo, config-first pattern discussed in Issue #73:
